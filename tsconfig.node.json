@@ -1,9 +1,8 @@
 {
   "extends": "@tomjs/tsconfig/node.json",
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "es2015",
     "composite": true
   },
-  "include": ["extension", "vite.config.ts"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts"],
+  "exclude": ["src/client.ts"]
 }

@@ -1,4 +1,10 @@
 {
-  "extends": "@tomjs/tsconfig/node.json",
-  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+  "extends": "@tomjs/tsconfig/vue.json",
+  "compilerOptions": {},
+  "include": ["src/client.ts"],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

@@ -2,23 +2,41 @@
   "name": "template-vue",
   "version": "0.0.0",
   "description": "vite + vue",
-  "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "vscode": "^1.56.0"
+  },
+  "main": "dist/extension/index.js",
+  "activationEvents": [
+    "onCommand:hello-world.showHelloWorld"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "hello-world.showHelloWorld",
+        "title": "Hello World: Show"
+      }
+    ]
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "dev": "run-p dev:vs dev:web",
+    "dev:web": "vite",
+    "dev:vs": "cross-env NODE_ENV=development tsup --watch",
+    "build": "run-s build:vs build:web",
+    "build:vs": "tsup",
+    "build:web": "vue-tsc --noEmit && vite build"
   },
   "dependencies": {
+    "@tomjs/vscode-extension-webview": "workspace:^",
+    "@vscode/webview-ui-toolkit": "^1.4.0",
     "vue": "^3.3.12"
   },
   "devDependencies": {
     "@types/node": "^18.19.3",
+    "@types/vscode": "^1.85.0",
+    "@types/vscode-webview": "^1.57.4",
     "@vitejs/plugin-vue": "^4.5.2",
-    "cross-env": "^7.0.3",
-    "typescript": "~5.3.3",
+    "typescript": "~5.2.2",
     "vite": "^5.0.10",
     "vue-tsc": "^1.8.25"
   }
