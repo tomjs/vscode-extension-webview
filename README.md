@@ -1,6 +1,6 @@
 # @tomjs/vscode-extension-webview
 
-[![npm](https://img.shields.io/npm/v/@tomjs/vscode-extension-webview)](https://www.npmjs.com/package/@tomjs/vscode-extension-webview) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/vscode-extension-webview) ![NPM](https://img.shields.io/npm/l/@tomjs/vscode-extension-webview)
+[![npm](https://img.shields.io/npm/v/@tomjs/vscode-extension-webview)](https://www.npmjs.com/package/@tomjs/vscode-extension-webview) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/vscode-extension-webview) ![NPM](https://img.shields.io/npm/l/@tomjs/vscode-extension-webview) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/vscode-extension-webview)
 
 **English** | [中文](./README.zh_CN.md)
 
@@ -53,6 +53,11 @@ Place the client code in `main.ts` of `vue`/`react` at the top.
 // eslint-disable-next-line simple-import-sort/imports
 import '@tomjs/vscode-extension-webview/client';
 ```
+
+## Documentation
+
+- [API Documentation](https://paka.dev/npm/@tomjs/vscode-extension-webview) provided by [paka.dev](https://paka.dev).
+- [index.d.ts](https://www.unpkg.com/browse/@tomjs/vscode-extension-webview/dist/index.d.ts) provided by [unpkg.com](https://www.unpkg.com).
 
 ## Examples
 
