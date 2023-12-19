@@ -5,7 +5,7 @@ import chokidar from 'chokidar';
 const SRC = path.resolve(__dirname, '../src/template.html');
 const DEST = path.resolve(__dirname, '../src/template.ts');
 
-async function minifyHtml() {
+function minifyHtml() {
   if (!fs.existsSync(SRC)) {
     throw new Error(`${SRC} is not found`);
   }
@@ -18,8 +18,8 @@ async function minifyHtml() {
 }
 
 if (process.env.WATCH) {
-  chokidar.watch(SRC).on('change', async () => {
-    await minifyHtml();
+  chokidar.watch(SRC).on('change', () => {
+    minifyHtml();
   });
 }
 
