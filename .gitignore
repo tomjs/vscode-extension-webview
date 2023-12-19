@@ -57,4 +57,3 @@ tsconfig.tsbuildinfo
 build
 dist
 release
-src/template.ts

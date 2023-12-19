@@ -12,7 +12,7 @@ function minifyHtml() {
 
   const html = fs.readFileSync(SRC, 'utf8');
 
-  fs.writeFileSync(DEST, `export default \`${html}\`;\n`, { encoding: 'utf8' });
+  fs.writeFileSync(DEST, `export default /* html */ \`${html}\`;\n`, { encoding: 'utf8' });
 
   console.log('minified template.html successfully!');
 }
