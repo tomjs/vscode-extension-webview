@@ -61,6 +61,13 @@ import '@tomjs/vscode-extension-webview/client';
 
 ## Examples
 
+First execute the following command to install dependencies and generate library files:
+
+```bash
+pnpm install
+pnpm build
+```
+
 Open the [examples](./examples) directory, there are `vue` and `react` examples.
 
 - [react](./examples/react)
