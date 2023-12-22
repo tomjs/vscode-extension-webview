@@ -1,6 +1,6 @@
 {
   "name": "@tomjs/vscode-extension-webview",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "When using 'webview.html' in vscode extension development, 'HMR' of vue/react is supported.",
   "keywords": [
     "vscode",
