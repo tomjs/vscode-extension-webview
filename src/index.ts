@@ -23,7 +23,7 @@ export function getHtml(options: string | WebviewHtmlDevOptions) {
     Object.assign(opts, options);
   }
 
-  return template.replace('{{serverUrl}}', opts.serverUrl);
+  return template.replace(new RegExp('{{serverUrl}}', 'g'), opts.serverUrl);
 }
 
 export default getHtml;

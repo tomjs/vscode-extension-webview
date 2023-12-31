@@ -74,19 +74,23 @@ export default /* html */ `<!doctype html>
 
       function addListeners(iframe) {
         window.addEventListener('message', function (e) {
-          const { type, data } = e.data;
-          if (type === '[vscode:client]:postMessage') {
-            getApi().postMessage(data);
-          } else if (type === '[vscode:client]:getState') {
-            iframe.contentWindow.postMessage(
-              {
-                type: '[vscode:extension]:getState',
-                data: getApi().getState(),
-              },
-              '*',
-            );
-          } else if (type === '[vscode:client]:setState') {
-            getApi().setState(data);
+          if (e.origin.startsWith('vscode-webview://')) {
+            iframe.contentWindow.postMessage(e.data, '*');
+          } else if ('{{serverUrl}}'.startsWith(e.origin)) {
+            const { type, data } = e.data;
+            if (type === '[vscode:client]:postMessage') {
+              getApi().postMessage(data);
+            } else if (type === '[vscode:client]:getState') {
+              iframe.contentWindow.postMessage(
+                {
+                  type: '[vscode:extension]:getState',
+                  data: getApi().getState(),
+                },
+                '*',
+              );
+            } else if (type === '[vscode:client]:setState') {
+              getApi().setState(data);
+            }
           }
         });
       }

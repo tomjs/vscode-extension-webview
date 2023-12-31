@@ -72,6 +72,7 @@ export class HelloWorldPanel {
         {
           // Enable JavaScript in the webview
           enableScripts: true,
+          retainContextWhenHidden: true,
           // Restrict the webview to only load resources from the `dist/webview` directories
           localResourceRoots: [Uri.joinPath(extensionUri, 'dist/webview')],
         },
@@ -167,5 +168,18 @@ export class HelloWorldPanel {
       undefined,
       this._disposables,
     );
+
+    let times = 0;
+    const interval = setInterval(() => {
+      times++;
+      if (times > 3) {
+        clearInterval(interval);
+        return;
+      }
+
+      webview.postMessage({ command: 'test', type: 'extension', data: Date.now() }).then(value => {
+        console.log('post message to webview:', value);
+      });
+    }, 1000);
   }
 }

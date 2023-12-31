@@ -14,7 +14,7 @@ function minifyHtml() {
 
   fs.writeFileSync(DEST, `export default /* html */ \`${html}\`;\n`, { encoding: 'utf8' });
 
-  console.log('minified template.html successfully!');
+  console.log('update template.html successfully!');
 }
 
 if (process.env.WATCH) {
