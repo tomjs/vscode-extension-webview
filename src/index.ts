@@ -1,4 +1,4 @@
-import template from './template';
+import template from './template.html';
 
 export interface WebviewHtmlDevOptions {
   /**
@@ -23,7 +23,7 @@ export function getHtml(options: string | WebviewHtmlDevOptions) {
     Object.assign(opts, options);
   }
 
-  return template.replace(new RegExp('{{serverUrl}}', 'g'), opts.serverUrl);
+  return (template as string).replace(new RegExp('{{serverUrl}}', 'g'), opts.serverUrl);
 }
 
 export default getHtml;

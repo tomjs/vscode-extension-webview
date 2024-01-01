@@ -9,6 +9,9 @@ export default defineConfig([
     dts: true,
     splitting: true,
     minify: false,
+    loader: {
+      '.html': 'text',
+    },
   },
   {
     entry: ['src/client.ts'],
