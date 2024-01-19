@@ -13,7 +13,6 @@ class VSCodeAPIWrapper {
   private readonly vsCodeApi: WebviewApi<unknown> | undefined;
 
   constructor() {
-    console.log(typeof acquireVsCodeApi);
     // Check if the acquireVsCodeApi function exists in the current development
     // context (i.e. VS Code development window or web browser)
     if (typeof acquireVsCodeApi === 'function') {
