@@ -35,12 +35,12 @@
   "devDependencies": {
     "@tomjs/vscode-extension-webview": "workspace:^",
     "@types/node": "^18.19.3",
-    "@types/react": "^18.2.45",
+    "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@types/vscode": "^1.85.0",
     "@types/vscode-webview": "^1.57.4",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "typescript": "~5.3.3",
-    "vite": "^5.0.10"
+    "vite": "^5.0.11"
   }
 }
