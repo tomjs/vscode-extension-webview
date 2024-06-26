@@ -10,6 +10,8 @@
 
 其他也可以通过监听前端代码变化，通过 `commands.executeCommand('workbench.action.webview.reloadWebviewAction')` 刷新前端代码。
 
+如果使用 `vite` 开发，推荐 [@tomjs/vite-plugin-vscode](https://www.npmjs.com/package/@tomjs/vite-plugin-vscode)
+
 ## 安装
 
 ```bash

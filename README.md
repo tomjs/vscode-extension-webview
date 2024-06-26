@@ -10,6 +10,8 @@ Due to the limitations of `webview.html`, `HMR` of `vue`/`react` cannot be used 
 
 Others can also monitor front-end code changes and refresh the front-end code through `commands.executeCommand('workbench.action.webview.reloadWebviewAction')`.
 
+If you use `vite` for development, [@tomjs/vite-plugin-vscode](https://www.npmjs.com/package/@tomjs/vite-plugin-vscode) is recommended
+
 ## Install
 
 ```bash
