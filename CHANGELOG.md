@@ -1,3 +1,7 @@
+## [1.3.3](https://github.com/tomjs/vscode-extension-webview/compare/v1.3.2...v1.3.3) (2024-06-27)
+
+- fix: client mock setState [8f75edb](https://github.com/tomjs/vscode-extension-webview/commit/8f75edb)
+
 ## [1.3.2](https://github.com/tomjs/vscode-extension-webview/compare/v1.3.1...v1.3.2) (2024-06-27)
 
 - docs: remove paka.dev document [29e8067](https://github.com/tomjs/vscode-extension-webview/commit/29e8067)
